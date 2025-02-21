@@ -6,11 +6,10 @@ command: kicad-startup
 finish-args:
   - --device=dri
   - --filesystem=home
-  # Required for default path of KiCad's IPC API
-  - --filesystem=/tmp:rw
   - --share=ipc
   - --share=network
   - --socket=x11
+  - --env=TMPDIR=/var/tmp
 
 add-extensions:
   org.kicad.KiCad.Library:
@@ -327,6 +326,7 @@ modules:
         commands:
           - export PYTHONUSERBASE="$XDG_DATA_HOME/python"
           - export PATH="$XDG_DATA_HOME/python/bin":$PATH
+          - export TMPDIR=/var/tmp
           - exec /usr/bin/python "$@"
       - type: script
         dest: flatpak-extra
@@ -334,6 +334,7 @@ modules:
         commands:
           - mkdir -p ${XDG_CONFIG_HOME}/unixodbc
           - export ODBCSYSINI=${XDG_CONFIG_HOME}/unixodbc
+          - export TMPDIR=/var/tmp
           # Remove config file, and recreate it from all available templates.
           # This handles uninstallation of ODBCDriver extensions.
           - rm -f ${ODBCSYSINI}/odbcinst.ini
@@ -350,6 +351,7 @@ modules:
         commands:
           - mkdir -p ${XDG_CONFIG_HOME}/unixodbc
           - export ODBCSYSINI=${XDG_CONFIG_HOME}/unixodbc
+          - export TMPDIR=/var/tmp
           # Remove config file, and recreate it from all available templates.
           # This handles uninstallation of ODBCDriver extensions.
           - rm -f ${ODBCSYSINI}/odbcinst.ini
@@ -366,6 +368,7 @@ modules:
         commands:
           - mkdir -p ${XDG_CONFIG_HOME}/unixodbc
           - export ODBCSYSINI=${XDG_CONFIG_HOME}/unixodbc
+          - export TMPDIR=/var/tmp
           # Remove config file, and recreate it from all available templates.
           # This handles uninstallation of ODBCDriver extensions.
           - rm -f ${ODBCSYSINI}/odbcinst.ini
