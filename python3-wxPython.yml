@@ -40,8 +40,6 @@ modules:
         x-checker-data:
           type: git
           tag-pattern: ^(v[\d\.]+)$
-          versions:
-            <: 0.3.32   # Caused build errors on aarch64
 
   - name: python3-build-dependencies
     buildsystem: simple
