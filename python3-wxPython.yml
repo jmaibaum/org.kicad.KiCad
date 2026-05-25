@@ -35,13 +35,11 @@ modules:
     sources:
       - type: git
         url: https://github.com/OpenMathLib/OpenBLAS
-        tag: v0.3.31
-        commit: 76f1be470c9b9f80dc6e27407e13b975df436489
+        tag: v0.3.33
+        commit: 62bcfb0dc9f1cfa685fc04135c50e2780c303137
         x-checker-data:
           type: git
           tag-pattern: ^(v[\d\.]+)$
-          versions:
-            <: 0.3.32   # Caused build errors on aarch64
 
   - name: python3-build-dependencies
     buildsystem: simple
@@ -80,8 +78,8 @@ modules:
         --prefix=${FLATPAK_DEST} numpy --no-build-isolation
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/d7/9f/b8cef5bffa569759033adda9481211426f12f53299629b410340795c2514/numpy-2.4.4.tar.gz
-        sha256: 2d390634c5182175533585cc89f3608a4682ccb173cc9bb940b2881c8d6f8fa0
+        url: https://files.pythonhosted.org/packages/d0/ad/fed0499ce6a338d2a03ebae59cd15093910c8875328855781952abf6c2fe/numpy-2.4.6.tar.gz
+        sha256: f3a3570c4a2a16746ac2c31a7c7c7b0c186b95ce902e33db6f28094ed7387dda
         x-checker-data:
           type: pypi
           name: numpy
