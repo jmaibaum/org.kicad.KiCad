@@ -294,8 +294,8 @@ modules:
     sources:
       - type: git
         url: https://gitlab.freedesktop.org/poppler/poppler.git
-        commit: b0091f08803ffe7784e365db45abd003159bf45d
-        tag: poppler-26.05.0
+        commit: 1fe40984214a729350da11950fc7f09343247202
+        tag: poppler-26.06.0
         x-checker-data:
           type: git
           tag-pattern: ^poppler-([\d\.]+)$
@@ -354,8 +354,8 @@ modules:
       - type: git
         dest: kicad-git
         url: https://gitlab.com/kicad/code/kicad.git
-        commit: 895c0c3779c43e4c6b368d1596a735d25e27e108
-        tag: 10.0.2-rc1
+        commit: 2b47ef4f2e3accf12eaa783bb9c27034014215e6
+        tag: 10.0.4-rc1
         x-checker-data:
           is-main-source: true
           type: git
