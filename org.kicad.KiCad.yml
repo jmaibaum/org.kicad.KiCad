@@ -251,8 +251,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/protocolbuffers/protobuf.git
-        tag: v35.0
-        commit: e59364c38e10de3686a3305ff11fbfc59a10dbd8
+        tag: v35.1
+        commit: 35cd01f9fe9afbeea38cc7b979a3b6bfcde82c03
         x-checker-data:
           type: git
           tag-pattern: ^v([\d\.]+)$
@@ -293,8 +293,8 @@ modules:
     sources:
       - type: git
         url: https://gitlab.freedesktop.org/poppler/poppler.git
-        commit: b0091f08803ffe7784e365db45abd003159bf45d
-        tag: poppler-26.05.0
+        commit: 1fe40984214a729350da11950fc7f09343247202
+        tag: poppler-26.06.0
         x-checker-data:
           type: git
           tag-pattern: ^poppler-([\d\.]+)$
@@ -354,8 +354,8 @@ modules:
       - type: git
         dest: kicad-git
         url: https://gitlab.com/kicad/code/kicad.git
-        commit: 146a4f2a7585c65bc580427a19b6fe2ec4a3f622
-        tag: 10.0.3
+        commit: f7414d419cae5df2d00e7eaacb16fc0e803799bc
+        tag: 10.0.4
         x-checker-data:
           is-main-source: true
           type: git
