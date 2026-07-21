@@ -231,8 +231,8 @@ modules:
       - -DCMAKE_BUILD_TYPE=RelWithDebInfo
     sources:
       - type: git
-        commit: f7164261c9bc0a7e0ebf767c584e5192810a8b24
-        tag: v1.9.4
+        commit: 26055f5af74ab1cf636d272e8a34315496d3f06f
+        tag: v1.9.6
         url: https://github.com/libgit2/libgit2
         x-checker-data:
           type: git
@@ -354,8 +354,8 @@ modules:
       - type: git
         dest: kicad-git
         url: https://gitlab.com/kicad/code/kicad.git
-        commit: f7414d419cae5df2d00e7eaacb16fc0e803799bc
-        tag: 10.0.4
+        commit: 18fb9289ff0efdca53c0352ed81a0973f0a6b58c
+        tag: 10.0.5
         x-checker-data:
           is-main-source: true
           type: git
