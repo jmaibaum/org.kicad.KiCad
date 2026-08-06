@@ -155,15 +155,13 @@ modules:
       - --disable-glcanvasegl
     sources:
       - type: git
-        commit: 749625e0ea4d70d1f75494aa52231d835531a618
-        tag: v3.2.11
+        commit: 565553ee980e925bbd8b3cdaeea0eb9f453d7dfd
+        tag: v3.3.3.1
         url: https://github.com/wxWidgets/wxWidgets
         x-checker-data:
           is-important: true
           type: git
           tag-pattern: ^v([\d\.]+)$
-          versions:
-            <: '3.3'  # See: https://github.com/wxWidgets/Phoenix/issues/2764
 
   - python3-requests.yml
   - python3-wxPython.yml
