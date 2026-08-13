@@ -152,7 +152,6 @@ modules:
       - /include
     config-opts:
       - --with-opengl
-      - --disable-glcanvasegl
     sources:
       - type: git
         commit: 565553ee980e925bbd8b3cdaeea0eb9f453d7dfd
@@ -307,13 +306,11 @@ modules:
     config-opts:
       - -DCMAKE_BUILD_TYPE=RelWithDebInfo
       - -DCMAKE_CTEST_ARGUMENTS="--output-on-failure"
-      - -DGLEW_INCLUDE_DIR=/app/include/GL
       - -DOCC_INCLUDE_DIR=/app/include/opencascade
       - -DOPENGL_glu_LIBRARY=/app/lib/libGLU.so
       - -DKICAD_BUILD_FLATPAK=ON
       - -DKICAD_BUILD_I18N=ON
       - -DKICAD_LIBRARY_DATA=/app/extensions/Library
-      - -DKICAD_USE_EGL=OFF
       - -DKICAD_USE_PCH=OFF  # https://bbs.archlinux.org/viewtopic.php?id=307900
     post-install:
       - install ../../flatpak-extra/kicad-startup /app/bin/kicad-startup
