@@ -152,18 +152,15 @@ modules:
       - /include
     config-opts:
       - --with-opengl
-      - --disable-glcanvasegl
     sources:
       - type: git
-        commit: 749625e0ea4d70d1f75494aa52231d835531a618
-        tag: v3.2.11
+        commit: 565553ee980e925bbd8b3cdaeea0eb9f453d7dfd
+        tag: v3.3.3.1
         url: https://github.com/wxWidgets/wxWidgets
         x-checker-data:
           is-important: true
           type: git
           tag-pattern: ^v([\d\.]+)$
-          versions:
-            <: '3.3'  # See: https://github.com/wxWidgets/Phoenix/issues/2764
 
   - python3-requests.yml
   - python3-wxPython.yml
@@ -182,6 +179,8 @@ modules:
           url: https://www.swig.org/download.html
           version-pattern: The latest release is <a href=".+">swig-([\d\.]+)</a>
           url-template: https://sourceforge.net/projects/swig/files/swig/swig-$version/swig-$version.tar.gz
+          versions:
+            <: '4.5.0'
 
   - name: ngspice
     cleanup:
@@ -197,8 +196,8 @@ modules:
     rm-configure: true
     sources:
       - type: archive
-        url: https://downloads.sourceforge.net/project/ngspice/ng-spice-rework/46/ngspice-46.tar.gz
-        sha256: a0d1699af1940b06649276dcd6ff5a566c8c0cad01b2f7b5e99dedbb4d64c19b
+        url: https://downloads.sourceforge.net/project/ngspice/ng-spice-rework/47/ngspice-47.tar.gz
+        sha256: 894e649651f1838a14095e5a5439e7d3aa63e87ede14d283173fda4fcdef675f
         x-checker-data:
           is-important: true
           type: html
@@ -293,8 +292,8 @@ modules:
     sources:
       - type: git
         url: https://gitlab.freedesktop.org/poppler/poppler.git
-        commit: b7989c187daee307b782ac4592cddb1ae0677b76
-        tag: poppler-26.07.0
+        commit: d663f8fe0237073fadf43e4e19acc46b3ba3e80a
+        tag: poppler-26.08.0
         x-checker-data:
           type: git
           tag-pattern: ^poppler-([\d\.]+)$
@@ -307,13 +306,11 @@ modules:
     config-opts:
       - -DCMAKE_BUILD_TYPE=RelWithDebInfo
       - -DCMAKE_CTEST_ARGUMENTS="--output-on-failure"
-      - -DGLEW_INCLUDE_DIR=/app/include/GL
       - -DOCC_INCLUDE_DIR=/app/include/opencascade
       - -DOPENGL_glu_LIBRARY=/app/lib/libGLU.so
       - -DKICAD_BUILD_FLATPAK=ON
       - -DKICAD_BUILD_I18N=ON
       - -DKICAD_LIBRARY_DATA=/app/extensions/Library
-      - -DKICAD_USE_EGL=OFF
       - -DKICAD_USE_PCH=OFF  # https://bbs.archlinux.org/viewtopic.php?id=307900
     post-install:
       - install ../../flatpak-extra/kicad-startup /app/bin/kicad-startup
