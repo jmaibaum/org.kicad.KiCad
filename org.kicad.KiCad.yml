@@ -136,8 +136,8 @@ modules:
       - /include
     sources:
       - type: archive
-        url: https://archives.boost.io/release/1.91.0/source/boost_1_91_0.tar.gz
-        sha256: 5734305f40a76c30f951c9abd409a45a2a19fb546efe4162119250bbe4d3a463
+        url: https://archives.boost.io/release/1.92.0/source/boost_1_92_0.tar.gz
+        sha256: c4a3b310ddd2472416e091067166b0713be97c63f38c212c484ada022fd296ce
         x-checker-data:
           type: html
           url: https://www.boost.org/feed/downloads.rss
@@ -179,7 +179,7 @@ modules:
           version-pattern: The latest release is <a href=".+">swig-([\d\.]+)</a>
           url-template: https://sourceforge.net/projects/swig/files/swig/swig-$version/swig-$version.tar.gz
           versions:
-            <: '4.5.0'
+            <: 4.5.0
 
   - name: ngspice
     cleanup:
@@ -195,8 +195,8 @@ modules:
     rm-configure: true
     sources:
       - type: archive
-        url: https://downloads.sourceforge.net/project/ngspice/ng-spice-rework/46/ngspice-46.tar.gz
-        sha256: a0d1699af1940b06649276dcd6ff5a566c8c0cad01b2f7b5e99dedbb4d64c19b
+        url: https://downloads.sourceforge.net/project/ngspice/ng-spice-rework/47/ngspice-47.tar.gz
+        sha256: 894e649651f1838a14095e5a5439e7d3aa63e87ede14d283173fda4fcdef675f
         x-checker-data:
           is-important: true
           type: html
@@ -229,8 +229,8 @@ modules:
       - -DCMAKE_BUILD_TYPE=RelWithDebInfo
     sources:
       - type: git
-        commit: 26055f5af74ab1cf636d272e8a34315496d3f06f
-        tag: v1.9.6
+        commit: 49e408b3208bc3093757a1c2db938d3590f3f412
+        tag: v1.9.7
         url: https://github.com/libgit2/libgit2
         x-checker-data:
           type: git
