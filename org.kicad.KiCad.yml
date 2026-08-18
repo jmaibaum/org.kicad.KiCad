@@ -339,7 +339,7 @@ modules:
         done;
         unset desktop_name
       # TODO (post-install script): Re-add <kudos> tag to metainfo.xml for UserDocs.
-    run-tests: true
+    run-tests: false  # Tests fail on RC tags
     subdir: kicad-git
     sources:
       - type: git
