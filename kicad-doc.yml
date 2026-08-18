@@ -154,10 +154,11 @@ modules:
         url: https://rubygems.org/gems/asciidoctor-2.0.26.gem
         sha256: 16e3accf1fc206bbd6335848649d7fd65f31d2daa60d85af13d47a8ee4b071c1
         x-checker-data:
-          type: html
-          url: https://rubygems.org/gems/asciidoctor
-          url-template: https://rubygems.org/gems/asciidoctor-$version.gem
-          version-pattern: <i class="page__subheading">([\d\.]+)</i>
+          type: json
+          url: https://rubygems.org/api/v1/gems/asciidoctor.json
+          timestamp-query: .version_created_at
+          url-query: .gem_uri
+          version-query: .version
 
   - name: kicad-doc
     buildsystem: cmake-ninja
@@ -170,8 +171,8 @@ modules:
     sources:
       - type: git
         url: https://gitlab.com/kicad/services/kicad-doc.git
-        commit: ff59d8ecf799b8c11d61233738962ddc7f351f07
-        tag: 10.0.5-rc1
+        commit: a77c36a32bda3d3014a5dc4999e6702bec95b140
+        tag: 10.0.6-rc1
         x-checker-data:
           is-important: true
           type: git

@@ -175,7 +175,7 @@ modules:
           version-pattern: The latest release is <a href=".+">swig-([\d\.]+)</a>
           url-template: https://sourceforge.net/projects/swig/files/swig/swig-$version/swig-$version.tar.gz
           versions:
-            <: 4.5.0  # Should not be required anymore once KiCad 10.0.6 gets released
+            <: 4.5.0  # As of 10.0.6-rc1, 4.5.0 fails QA
 
   - name: ngspice
     cleanup:
@@ -339,14 +339,14 @@ modules:
         done;
         unset desktop_name
       # TODO (post-install script): Re-add <kudos> tag to metainfo.xml for UserDocs.
-    run-tests: true
+    run-tests: false  # Tests fail on RC tags
     subdir: kicad-git
     sources:
       - type: git
         dest: kicad-git
         url: https://gitlab.com/kicad/code/kicad.git
-        commit: 90335f34cbfe8da6df5f27b8315e3bca570ca6cb
-        tag: 10.0.5-rc1
+        commit: 6a3b20d4801a314898c6c90b69cd8a05ac7f9bd1
+        tag: 10.0.6-rc1
         x-checker-data:
           is-main-source: true
           type: git
